@@ -5,6 +5,8 @@ import welcomeImg from "@/assets/service-welcome.jpg";
 import gamesImg from "@/assets/service-games.jpg";
 import stationeryImg from "@/assets/service-stationery.jpg";
 import signatureImg from "@/assets/signature.jpg";
+import logoAsset from "@/assets/velvet-logo.png.asset.json";
+import qrAsset from "@/assets/whatsapp-qr.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -51,14 +53,16 @@ const services = [
   },
 ];
 
-function Monogram({ className = "" }: { className?: string }) {
+function Monogram({ className = "", size = 40 }: { className?: string; size?: number }) {
   return (
-    <span
-      className={`italic-accent text-2xl leading-none tracking-tight ${className}`}
-      style={{ fontFamily: "var(--font-serif)" }}
-    >
-      V<span className="text-foreground/70">c</span>
-    </span>
+    <img
+      src={logoAsset.url}
+      alt="Velvet Crafts Studio"
+      width={size}
+      height={size}
+      className={`rounded-full object-contain ${className}`}
+      style={{ width: size, height: size }}
+    />
   );
 }
 
@@ -113,7 +117,16 @@ function Index() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-24 min-h-[100svh] flex flex-col justify-end">
           <div className="max-w-2xl">
-            <p className="eyebrow mb-6">Est. Digital Atelier · India</p>
+            <div className="mb-8 flex items-center gap-4">
+              <img
+                src={logoAsset.url}
+                alt="Velvet Crafts Studio emblem"
+                width={80}
+                height={80}
+                className="h-20 w-20 rounded-full object-contain shadow-lg"
+              />
+              <span className="eyebrow text-foreground/70">Digital Atelier · India</span>
+            </div>
             <h1 className="font-serif text-[clamp(3rem,10vw,7.5rem)] leading-[0.95] tracking-tight text-foreground">
               Velvet
               <br />
@@ -274,10 +287,10 @@ function Index() {
               className="absolute -inset-4 -z-0 opacity-40"
               style={{ background: "radial-gradient(closest-side, var(--color-gold), transparent)" }}
             />
-            <div className="relative aspect-[7/5] overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden mx-auto max-w-md lg:max-w-none">
               <img
                 src={signatureImg}
-                alt="Custom hosted web invitation shown on phone and laptop"
+                alt="Signature hosted web invitation shown on a smartphone"
                 loading="lazy"
                 width={1400}
                 height={1000}
@@ -320,34 +333,15 @@ function Index() {
               <div className="text-center">
                 <p className="eyebrow mb-4">WhatsApp</p>
                 <div className="inline-flex flex-col items-center gap-3 p-4 bg-secondary/60 border border-border">
-                  <div className="relative h-32 w-32 bg-ivory">
-                    {/* Stylised QR placeholder */}
-                    <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full text-primary" aria-hidden>
-                      <rect x="0" y="0" width="100" height="100" fill="var(--color-ivory)" />
-                      <g fill="currentColor">
-                        {Array.from({ length: 100 }).map((_, i) => {
-                          const x = i % 10;
-                          const y = Math.floor(i / 10);
-                          const on = (x * 7 + y * 13 + (x ^ y) * 5) % 3 !== 0;
-                          return on ? <rect key={i} x={x * 10} y={y * 10} width="9" height="9" /> : null;
-                        })}
-                        <rect x="0" y="0" width="30" height="30" fill="var(--color-ivory)" />
-                        <rect x="0" y="0" width="30" height="30" stroke="currentColor" strokeWidth="6" fill="none" />
-                        <rect x="10" y="10" width="10" height="10" />
-                        <rect x="70" y="0" width="30" height="30" fill="var(--color-ivory)" />
-                        <rect x="70" y="0" width="30" height="30" stroke="currentColor" strokeWidth="6" fill="none" />
-                        <rect x="80" y="10" width="10" height="10" />
-                        <rect x="0" y="70" width="30" height="30" fill="var(--color-ivory)" />
-                        <rect x="0" y="70" width="30" height="30" stroke="currentColor" strokeWidth="6" fill="none" />
-                        <rect x="10" y="80" width="10" height="10" />
-                      </g>
-                      <circle cx="50" cy="50" r="12" fill="var(--color-ivory)" />
-                      <circle cx="50" cy="50" r="10" fill="#25D366" />
-                      <path
-                        d="M46 46 h8 v8 h-8z M50 44 q-6 0 -6 6 q0 2 1 4 l-1 3 l3 -1 q2 1 3 1 q6 0 6 -6 q0 -6 -6 -7z"
-                        fill="white"
-                      />
-                    </svg>
+                  <div className="relative h-40 w-40 bg-ivory p-2">
+                    <img
+                      src={qrAsset.url}
+                      alt="WhatsApp QR code for Velvet Crafts Studio"
+                      width={320}
+                      height={320}
+                      loading="lazy"
+                      className="h-full w-full object-contain"
+                    />
                   </div>
                   <p className="eyebrow text-foreground/60">Scan to chat</p>
                 </div>
