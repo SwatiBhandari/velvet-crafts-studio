@@ -287,7 +287,7 @@ function Index() {
               className="absolute -inset-4 -z-0 opacity-40"
               style={{ background: "radial-gradient(closest-side, var(--color-gold), transparent)" }}
             />
-            <div className="relative aspect-[7/5] overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden mx-auto max-w-md lg:max-w-none">
               <img
                 src={signatureImg}
                 alt="Signature hosted web invitation shown on a smartphone"
