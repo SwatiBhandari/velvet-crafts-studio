@@ -290,7 +290,7 @@ function Index() {
             <div className="relative aspect-[7/5] overflow-hidden">
               <img
                 src={signatureImg}
-                alt="Custom hosted web invitation shown on phone and laptop"
+                alt="Signature hosted web invitation shown on a smartphone"
                 loading="lazy"
                 width={1400}
                 height={1000}
