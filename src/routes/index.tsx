@@ -117,7 +117,16 @@ function Index() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-24 min-h-[100svh] flex flex-col justify-end">
           <div className="max-w-2xl">
-            <p className="eyebrow mb-6">Est. Digital Atelier · India</p>
+            <div className="mb-8 flex items-center gap-4">
+              <img
+                src={logoAsset.url}
+                alt="Velvet Crafts Studio emblem"
+                width={80}
+                height={80}
+                className="h-20 w-20 rounded-full object-contain shadow-lg"
+              />
+              <span className="eyebrow text-foreground/70">Digital Atelier · India</span>
+            </div>
             <h1 className="font-serif text-[clamp(3rem,10vw,7.5rem)] leading-[0.95] tracking-tight text-foreground">
               Velvet
               <br />
