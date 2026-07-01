@@ -333,34 +333,15 @@ function Index() {
               <div className="text-center">
                 <p className="eyebrow mb-4">WhatsApp</p>
                 <div className="inline-flex flex-col items-center gap-3 p-4 bg-secondary/60 border border-border">
-                  <div className="relative h-32 w-32 bg-ivory">
-                    {/* Stylised QR placeholder */}
-                    <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full text-primary" aria-hidden>
-                      <rect x="0" y="0" width="100" height="100" fill="var(--color-ivory)" />
-                      <g fill="currentColor">
-                        {Array.from({ length: 100 }).map((_, i) => {
-                          const x = i % 10;
-                          const y = Math.floor(i / 10);
-                          const on = (x * 7 + y * 13 + (x ^ y) * 5) % 3 !== 0;
-                          return on ? <rect key={i} x={x * 10} y={y * 10} width="9" height="9" /> : null;
-                        })}
-                        <rect x="0" y="0" width="30" height="30" fill="var(--color-ivory)" />
-                        <rect x="0" y="0" width="30" height="30" stroke="currentColor" strokeWidth="6" fill="none" />
-                        <rect x="10" y="10" width="10" height="10" />
-                        <rect x="70" y="0" width="30" height="30" fill="var(--color-ivory)" />
-                        <rect x="70" y="0" width="30" height="30" stroke="currentColor" strokeWidth="6" fill="none" />
-                        <rect x="80" y="10" width="10" height="10" />
-                        <rect x="0" y="70" width="30" height="30" fill="var(--color-ivory)" />
-                        <rect x="0" y="70" width="30" height="30" stroke="currentColor" strokeWidth="6" fill="none" />
-                        <rect x="10" y="80" width="10" height="10" />
-                      </g>
-                      <circle cx="50" cy="50" r="12" fill="var(--color-ivory)" />
-                      <circle cx="50" cy="50" r="10" fill="#25D366" />
-                      <path
-                        d="M46 46 h8 v8 h-8z M50 44 q-6 0 -6 6 q0 2 1 4 l-1 3 l3 -1 q2 1 3 1 q6 0 6 -6 q0 -6 -6 -7z"
-                        fill="white"
-                      />
-                    </svg>
+                  <div className="relative h-40 w-40 bg-ivory p-2">
+                    <img
+                      src={qrAsset.url}
+                      alt="WhatsApp QR code for Velvet Crafts Studio"
+                      width={320}
+                      height={320}
+                      loading="lazy"
+                      className="h-full w-full object-contain"
+                    />
                   </div>
                   <p className="eyebrow text-foreground/60">Scan to chat</p>
                 </div>
