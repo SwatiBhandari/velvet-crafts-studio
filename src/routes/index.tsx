@@ -5,6 +5,8 @@ import welcomeImg from "@/assets/service-welcome.jpg";
 import gamesImg from "@/assets/service-games.jpg";
 import stationeryImg from "@/assets/service-stationery.jpg";
 import signatureImg from "@/assets/signature.jpg";
+import logoAsset from "@/assets/velvet-logo.png.asset.json";
+import qrAsset from "@/assets/whatsapp-qr.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -51,14 +53,16 @@ const services = [
   },
 ];
 
-function Monogram({ className = "" }: { className?: string }) {
+function Monogram({ className = "", size = 40 }: { className?: string; size?: number }) {
   return (
-    <span
-      className={`italic-accent text-2xl leading-none tracking-tight ${className}`}
-      style={{ fontFamily: "var(--font-serif)" }}
-    >
-      V<span className="text-foreground/70">c</span>
-    </span>
+    <img
+      src={logoAsset.url}
+      alt="Velvet Crafts Studio"
+      width={size}
+      height={size}
+      className={`rounded-full object-contain ${className}`}
+      style={{ width: size, height: size }}
+    />
   );
 }
 
