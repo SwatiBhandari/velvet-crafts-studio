@@ -131,7 +131,7 @@ function Index() {
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-6">
               <a
-                href="#signature"
+                href="#services"
                 className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase hover:bg-accent transition-colors"
               >
                 Explore the Studio
