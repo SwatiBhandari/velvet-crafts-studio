@@ -112,18 +112,18 @@ function Index() {
           height={1200}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-ivory/10 to-ivory/95" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--ivory)_95%)] opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/60 via-ivory/30 to-ivory" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--ivory)_85%)] opacity-80" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-24 min-h-[100svh] flex flex-col justify-end">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl bg-ivory/70 backdrop-blur-sm p-6 -mx-2 rounded-sm">
             <h1 className="font-serif text-[clamp(3rem,10vw,7.5rem)] leading-[0.95] tracking-tight text-foreground">
               Velvet
               <br />
-              <span className="italic-accent">Crafts</span> Studio
+              <span className="italic-accent">Crafts</span>Table>
             </h1>
             <div className="mt-8 max-w-md">
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
                 Affordable luxury for your
                 <span className="italic-accent"> auspicious </span>
                 beginnings.
