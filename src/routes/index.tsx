@@ -120,7 +120,7 @@ function Index() {
             <h1 className="font-serif text-[clamp(3rem,10vw,7.5rem)] leading-[0.95] tracking-tight text-foreground">
               Velvet
               <br />
-              <span className="italic-accent">Crafts</span>Table>
+              <span className="italic-accent">Crafts</span> Studio
             </h1>
             <div className="mt-8 max-w-md">
               <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
