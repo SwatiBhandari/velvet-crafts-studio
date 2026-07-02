@@ -117,16 +117,6 @@ function Index() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-24 min-h-[100svh] flex flex-col justify-end">
           <div className="max-w-2xl">
-            <div className="mb-8 flex items-center gap-4">
-              <img
-                src={logoAsset.url}
-                alt="Velvet Crafts Studio emblem"
-                width={80}
-                height={80}
-                className="h-20 w-20 rounded-full object-contain shadow-lg"
-              />
-              <span className="eyebrow text-foreground/70">Digital Atelier · India</span>
-            </div>
             <h1 className="font-serif text-[clamp(3rem,10vw,7.5rem)] leading-[0.95] tracking-tight text-foreground">
               Velvet
               <br />
@@ -141,7 +131,7 @@ function Index() {
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-6">
               <a
-                href="#signature"
+                href="#services"
                 className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase hover:bg-accent transition-colors"
               >
                 Explore the Studio
@@ -269,7 +259,9 @@ function Index() {
 
             <div className="mt-12 flex flex-wrap items-center gap-8">
               <a
-                href="#contact"
+                href="https://invite-peek.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-transparent text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase border transition-colors hover:text-primary hover:bg-ivory"
                 style={{ borderColor: "var(--color-gold)" }}
               >
