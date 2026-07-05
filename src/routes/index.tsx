@@ -1,3 +1,5 @@
+
+Index · TSX
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import invitationsImg from "@/assets/service-invitations.jpg";
@@ -7,12 +9,12 @@ import stationeryImg from "@/assets/service-stationery.jpg";
 import signatureImg from "@/assets/signature.jpg";
 import logoAsset from "@/assets/velvet-logo.png.asset.json";
 import qrAsset from "@/assets/whatsapp-qr.jpg.asset.json";
-import qrLogo from "@/assets/QR.png"; 
-
+import qrLogo from "@/assets/QR.png";
+ 
 export const Route = createFileRoute("/")({
   component: Index,
 });
-
+ 
 const pillars = [
   {
     n: "01",
@@ -30,7 +32,7 @@ const pillars = [
     body: "Our web-hosted designs ensure your milestones live on forever, serving as a digital vault for your memories.",
   },
 ];
-
+ 
 const services = [
   {
     img: invitationsImg,
@@ -53,7 +55,7 @@ const services = [
     body: "From menus and itineraries to personalized signage — everything you need, meticulously designed and ready for you to print locally.",
   },
 ];
-
+ 
 function Monogram({ className = "", size = 40 }: { className?: string; size?: number }) {
   return (
     <img
@@ -66,7 +68,7 @@ function Monogram({ className = "", size = 40 }: { className?: string; size?: nu
     />
   );
 }
-
+ 
 function Ornament() {
   return (
     <div className="flex items-center justify-center gap-3 text-accent">
@@ -78,7 +80,7 @@ function Ornament() {
     </div>
   );
 }
-
+ 
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -103,7 +105,7 @@ function Index() {
           </a>
         </nav>
       </header>
-
+ 
       {/* HERO */}
       <section id="top" className="relative min-h-[100svh] w-full overflow-hidden">
         <img
@@ -115,7 +117,7 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ivory/60 via-ivory/30 to-ivory" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--ivory)_85%)] opacity-80" />
-
+ 
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-24 min-h-[100svh] flex flex-col justify-end">
           <div className="max-w-2xl bg-ivory/70 backdrop-blur-sm p-6 -mx-2 rounded-sm">
             <h1 className="font-serif text-[clamp(3rem,10vw,7.5rem)] leading-[0.95] tracking-tight text-foreground">
@@ -145,7 +147,7 @@ function Index() {
           </div>
         </div>
       </section>
-
+ 
       {/* ABOUT */}
       <section id="about" className="py-32 md:py-40 px-6">
         <div className="mx-auto max-w-5xl text-center">
@@ -167,7 +169,7 @@ function Index() {
           </div>
         </div>
       </section>
-
+ 
       {/* EXPERIENCE / PILLARS */}
       <section id="experience" className="relative py-32 md:py-40 px-6 bg-secondary/60">
         <div className="mx-auto max-w-7xl">
@@ -184,7 +186,7 @@ function Index() {
               A three-part philosophy that shapes every commission we take on — from first sketch to final send.
             </p>
           </div>
-
+ 
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {pillars.map((p) => (
               <article key={p.n} className="bg-secondary/60 p-10 md:p-12 min-h-[22rem] flex flex-col">
@@ -199,7 +201,7 @@ function Index() {
           </div>
         </div>
       </section>
-
+ 
       {/* SERVICES */}
       <section id="services" className="py-32 md:py-40 px-6">
         <div className="mx-auto max-w-7xl">
@@ -211,7 +213,7 @@ function Index() {
               for the whole celebration.
             </h2>
           </div>
-
+ 
           <div className="grid md:grid-cols-2 gap-14 md:gap-20">
             {services.map((s, i) => (
               <article key={s.title} className="group">
@@ -237,7 +239,7 @@ function Index() {
           </div>
         </div>
       </section>
-
+ 
       {/* SIGNATURE */}
       <section id="signature" className="relative py-32 md:py-40 px-6 bg-primary text-primary-foreground overflow-hidden">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
@@ -257,7 +259,7 @@ function Index() {
               invitations are custom-built websites designed to capture the exact essence of your celebration —
               elegant, highly modern, and completely interactive.
             </p>
-
+ 
             <div className="mt-12 flex flex-wrap items-center gap-8">
               <a
                 href="https://invite-peek.lovable.app/"
@@ -274,7 +276,7 @@ function Index() {
               </p>
             </div>
           </div>
-
+ 
           <div className="relative">
             <div
               className="absolute -inset-4 -z-0 opacity-40"
@@ -293,7 +295,7 @@ function Index() {
           </div>
         </div>
       </section>
-
+ 
       {/* CONTACT */}
       <section id="contact" className="py-32 md:py-40 px-6">
         <div className="mx-auto max-w-6xl">
@@ -305,7 +307,7 @@ function Index() {
               <span className="italic-accent">auspicious</span> beginning.
             </h2>
           </div>
-
+ 
           <div className="grid md:grid-cols-3 gap-10 md:gap-6 border-t border-border pt-16">
             <div>
               <p className="eyebrow mb-4">Call</p>
@@ -335,6 +337,11 @@ function Index() {
                       loading="lazy"
                       className="h-full w-full object-contain"
                     />
+                    <img
+                      src={qrLogo}
+                      alt=""
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-9 w-9 rounded-full ring-4 ring-ivory object-cover"
+                    />
                   </div>
                   <p className="eyebrow text-foreground/60">Scan to chat</p>
                 </div>
@@ -343,7 +350,7 @@ function Index() {
           </div>
         </div>
       </section>
-
+ 
       {/* FOOTER */}
       <footer className="border-t border-border py-14 px-6 bg-secondary/40">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
