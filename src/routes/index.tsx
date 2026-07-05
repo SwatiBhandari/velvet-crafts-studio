@@ -1,5 +1,3 @@
-
-Index · TSX
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import invitationsImg from "@/assets/service-invitations.jpg";
