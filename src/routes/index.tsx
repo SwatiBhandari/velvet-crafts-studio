@@ -7,6 +7,7 @@ import stationeryImg from "@/assets/service-stationery.jpg";
 import signatureImg from "@/assets/signature.jpg";
 import logoAsset from "@/assets/velvet-logo.png.asset.json";
 import qrAsset from "@/assets/whatsapp-qr.jpg.asset.json";
+import qrLogo from "@/assets/QR.png"; 
 
 export const Route = createFileRoute("/")({
   component: Index,
