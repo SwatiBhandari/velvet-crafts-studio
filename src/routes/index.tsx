@@ -259,7 +259,7 @@ function Index() {
  
             <div className="mt-12 flex flex-wrap items-center gap-8">
               <a
-                href="https://invite-peek.lovable.app/"
+                href="https://signature.velvetcraftsstudio.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-transparent text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase border transition-colors hover:text-primary hover:bg-ivory"
